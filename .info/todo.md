@@ -29,3 +29,7 @@
 - memcmp
 - strnstr
 - atoi
+
+# Todo:
+- make NAME?
+- 
