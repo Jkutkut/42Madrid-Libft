@@ -1,6 +1,9 @@
 .info
-a.out
-test*
+bin
 .vscode
+
+*.out
+*.a
+test*
 *.pdf
 autoTests
