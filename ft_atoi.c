@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:53:34 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 16:53:36 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/18 17:04:35 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #define SPACES " \n\v\f\r\t"
 
-int	is_space(char c)
+static int	is_space(char c)
 {
 	unsigned int	i;
 
@@ -26,7 +26,7 @@ int	is_space(char c)
 	return (0);
 }
 
-int	is_number(char c)
+static int	is_number(char c)
 {
 	return (c >= MIN_NUM && c <= MAX_NUM);
 }
