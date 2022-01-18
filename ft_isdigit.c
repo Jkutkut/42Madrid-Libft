@@ -6,11 +6,11 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 15:36:37 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 16:13:46 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/18 17:52:29 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(char c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
