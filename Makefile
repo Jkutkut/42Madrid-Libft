@@ -2,20 +2,20 @@
 CC=gcc
 FLAGS=-Wall -Wextra
 COMPILE=@$(CC) $(FLAGS)
-EXE_NAME=a.out
+LIB_NAME=libft.a
 
 
 # Binaries variables
 FUNCTIONS=$(patsubst %.c,bin/%.o,$(wildcard *.c))
 
 # Compilers:
-all: $(EXE_NAME)
+all: $(LIB_NAME)
 
 
 # Binary files
-$(EXE_NAME): $(MAIN) binaries
-	$(info Compiling all into $(EXE_NAME))
-	@#$(COMPILE) $(MAIN) $(OUTPUT) $(CHESS_LOGIC) -o $(EXE_NAME)
+$(LIB_NAME): $(MAIN) binaries
+	$(info Compiling all into $(LIB_NAME))
+	@ar -crs $(LIB_NAME) $(FUNCTIONS)
 
 binaries: $(FUNCTIONS)
 	$(info Object files ready)
@@ -36,8 +36,8 @@ fclean: clean_main clean_bin
 	$(info Project cleaned.)
 
 clean_main:
-	$(info Removing $(EXE_NAME))
-	@#rm -f $(EXE_NAME)
+	$(info Removing $(LIB_NAME))
+	@rm -f $(LIB_NAME)
 
 clean_bin:
 	$(info Removing binary directory)
