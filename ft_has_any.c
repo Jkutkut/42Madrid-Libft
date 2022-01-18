@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_has_any.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
+/*   By: jkutkut <jre-gonz@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 15:36:37 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 16:11:11 by jre-gonz         ###   ########.fr       */
+/*   Created: 2021/11/30 19:01:01 by jkutkut           #+#    #+#             */
+/*   Updated: 2022/01/18 09:53:48 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(char c)
+int	ft_has_any(char c, char *str)
 {
-	return ((c >= "a" && c <= "z") || (c >= 'A' && c <= 'Z'));
+	unsigned int	i;
+
+	i = 0;
+	while (str[i])
+		if (str[i] == c)
+			return (1);
+	return (0);
 }

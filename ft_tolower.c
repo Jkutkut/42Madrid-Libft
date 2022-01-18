@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:24:56 by jre-gonz          #+#    #+#             */
 /*   Updated: 2022/01/18 16:26:37 by jre-gonz         ###   ########.fr       */

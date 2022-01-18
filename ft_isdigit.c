@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 15:36:37 by jre-gonz          #+#    #+#             */
 /*   Updated: 2022/01/18 16:13:46 by jre-gonz         ###   ########.fr       */
