@@ -12,7 +12,7 @@
 
 #include <unistd.h>
 
-int	is_lower(char c)
+static int	is_lower(char c)
 {
 	return (c >= 'a' && c <= 'z');
 }
