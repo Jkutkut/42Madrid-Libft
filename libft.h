@@ -21,7 +21,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char* s);
-// void *memset(void *s, int c, size_t n); // The memset() function fills the first n bytes of the memory area pointed to by s with the con-stant byte c.
+void *	ft_memset(void *s, int c, size_t n);
 // void explicit_bzero(void *s, size_t n); // The  bzero()  function  erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
 // void *memcpy(void *restrict dest, const void *restrict src, size_t n); // The memcpy() function copies n bytes from memory area src to memory area dest.  The memory areas must not overlap.  Use memmove(3) if the memory areas do overlap.
 // void *memmove(void *dest, const void *src, size_t n); // The  memmove() function copies n bytes from memory area src to memory area dest. The memory areas may overlap: copying takes place as though the bytes in src are first  copied  into a temporary array that does not overlap src or dest, and the bytes are then copied from the temporary array to dest.
