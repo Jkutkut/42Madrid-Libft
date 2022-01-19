@@ -13,11 +13,11 @@ all: $(LIB_NAME)
 
 
 # Binary files
-$(LIB_NAME): $(MAIN) binaries
+$(LIB_NAME): binaries
 	$(info Compiling all into $(LIB_NAME))
 	ar -crs $(LIB_NAME) $(FUNCTIONS)
 
-	$(info Debug cpy)
+	# ! debug
 	@cp -f libft.h tests/
 
 binaries: $(FUNCTIONS)
