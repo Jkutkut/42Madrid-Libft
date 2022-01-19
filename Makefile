@@ -1,12 +1,12 @@
 # Compiler options
 CC=gcc
-FLAGS=-Wall -Wextra
+FLAGS=-Wall -Wextra # TODO -Werror
 COMPILE=@$(CC) $(FLAGS)
 LIB_NAME=libft.a
 
 
 # Binaries variables
-FUNCTIONS=$(patsubst %.c,bin/%.o,$(wildcard *.c))
+FUNCTIONS=$(patsubst %.c,bin/%.o,$(wildcard *.c)) # TODO manual files
 
 # Compilers:
 all: $(LIB_NAME)
