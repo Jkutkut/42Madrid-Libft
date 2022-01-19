@@ -13,12 +13,14 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-// // strlen
+#include <stddef.h>
+
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char* s);
 // void *memset(void *s, int c, size_t n); // The memset() function fills the first n bytes of the memory area pointed to by s with the con-stant byte c.
 // void explicit_bzero(void *s, size_t n); // The  bzero()  function  erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeros (bytes containing '\0') to that area.
 // void *memcpy(void *restrict dest, const void *restrict src, size_t n); // The memcpy() function copies n bytes from memory area src to memory area dest.  The memory areas must not overlap.  Use memmove(3) if the memory areas do overlap.

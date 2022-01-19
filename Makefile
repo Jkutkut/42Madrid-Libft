@@ -6,8 +6,7 @@ LIB_NAME=libft.a
 
 
 # Binaries variables
-#FUNCTIONS=$(patsubst %.c,bin/%.o,$(wildcard *.c))
-FUNCTIONS=$(patsubst %.c,bin/%.o,ft_isalpha.c ft_isdigit.c ft_isalnum.c)
+FUNCTIONS=$(patsubst %.c,bin/%.o,$(wildcard *.c))
 
 # Compilers:
 all: $(LIB_NAME)
@@ -16,7 +15,7 @@ all: $(LIB_NAME)
 # Binary files
 $(LIB_NAME): $(MAIN) binaries
 	$(info Compiling all into $(LIB_NAME))
-	@ar -crs $(LIB_NAME) $(FUNCTIONS)
+	ar -crs $(LIB_NAME) $(FUNCTIONS)
 
 	$(info Debug cpy)
 	@cp -f libft.h tests/
