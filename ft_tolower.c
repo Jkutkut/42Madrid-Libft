@@ -3,31 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:24:56 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 16:26:37 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/20 10:34:32 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int	ft_isuppercase(char c);
 
-
-static int	is_upper(char c)
+int	ft_tolower(char c)
 {
-	return (c >= 'Z' && c <= 'A');
-}
-
-char	*ft_strlowcase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (is_upper(str[i]))
-			str[i] += 32;
-		i++;
-	}
-	return (str);
+	if (ft_isuppercase(c))
+		return (c + 32);
+	return (c);
 }

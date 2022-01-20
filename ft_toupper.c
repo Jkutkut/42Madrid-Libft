@@ -3,30 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:29:11 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 16:29:39 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/20 10:18:34 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+int	ft_islowercase(char c);
 
-static int	is_lower(char c)
+int ft_toupper(char c)
 {
-	return (c >= 'a' && c <= 'z');
-}
-
-char	*ft_strupcase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (is_lower(str[i]))
-			str[i] -= 32;
-		i++;
-	}
-	return (str);
+	if (ft_islowercase(c))
+		return (c - 32);
+	return (c);
 }
