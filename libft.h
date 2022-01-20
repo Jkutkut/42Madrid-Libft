@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 12:06:44 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/20 15:05:07 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-// char *strchr(const char *s, int c);
-// /*
-// The strchr() function returns a pointer to the first occurrence of the character
-//        c in the string s.
+char	*ft_strchr(const char *s, int c);
+/*
+The strchr() function returns a pointer to the first occurrence of the character
+       c in the string s.
 
-//        The strrchr() function returns a pointer to the last occurrence of the character
-//        c in the string s.
-// */
+       The strrchr() function returns a pointer to the last occurrence of the character
+       c in the string s.
+*/
 // char *strrchr(const char *s, int c);
 
 // int strncmp(const char *s1, const char *s2, size_t n);
