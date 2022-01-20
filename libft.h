@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 18:29:44 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/20 18:32:35 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
-int atoi(const char *nptr);
+int		ft_atoi(const char *nptr);
 
+void	*ft_calloc(size_t count, size_t size);
 #endif
