@@ -10,15 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-- isalnum
-- isascii
-- isprint
-- strlen
-- memset
-- bzero
-- memcpy
-- memmove
-- strlcpy
 - strlcat
 - toupper
 - tolower
@@ -32,4 +23,6 @@
 
 # Todo:
 - make NAME?
-- 
+- strlcat:
+  - not able to run original
+  - check return
