@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 18:03:56 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/20 18:29:44 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,22 +38,6 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
-// int atoi(const char *nptr);
-/*
-The  atoi()  function  converts  the initial portion of the string pointed to by
-       nptr to int.  The behavior is the same as
-
-           strtol(nptr, NULL, 10);
-
-       except that atoi() does not detect errors.
-
-       The atol() and atoll() functions behave the same as  atoi(),  except  that  they
-       convert  the  initial portion of the string to their return type of long or long
-       long.
-
-RETURN VALUE
-       The converted value or 0 on error.
-*/
-
+int atoi(const char *nptr);
 
 #endif

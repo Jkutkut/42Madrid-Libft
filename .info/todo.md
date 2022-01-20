@@ -10,11 +10,10 @@
 #                                                                              #
 # **************************************************************************** #
 
-- strnstr
-- atoi
 
 # Todo:
 - make NAME?
 - strlcat:
   - not able to run original
   - check return
+- Atoi: 2good2betrue?
