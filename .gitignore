@@ -4,6 +4,6 @@ bin
 
 *.out
 *.a
-test*
+_test*
 *.pdf
 autoTests
