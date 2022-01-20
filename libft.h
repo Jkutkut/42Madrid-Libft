@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 15:19:57 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/20 15:33:22 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,28 +36,28 @@ int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 
-// int strncmp(const char *s1, const char *s2, size_t n);
-// /*
-// The  strcmp()  function  compares  the two strings s1 and s2.  The locale is not
-//        taken into account (for a locale-aware comparison, see strcoll(3)).  The compar‐
-//        ison is done using unsigned characters.
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+/*
+The  strcmp()  function  compares  the two strings s1 and s2.  The locale is not
+       taken into account (for a locale-aware comparison, see strcoll(3)).  The compar‐
+       ison is done using unsigned characters.
 
-//        strcmp() returns an integer indicating the result of the comparison, as follows:
+       strcmp() returns an integer indicating the result of the comparison, as follows:
 
-//        • 0, if the s1 and s2 are equal;
+       • 0, if the s1 and s2 are equal;
 
-//        • a negative value if s1 is less than s2;
+       • a negative value if s1 is less than s2;
 
-//        • a positive value if s1 is greater than s2.
+       • a positive value if s1 is greater than s2.
 
-//        The strncmp() function is similar, except it compares only the first (at most) n
-//        bytes of s1 and s2.
+       The strncmp() function is similar, except it compares only the first (at most) n
+       bytes of s1 and s2.
 
-// RETURN VALUE
-//        The strcmp() and strncmp() functions return an integer less than, equal  to,  or
-//        greater  than  zero if s1 (or the first n bytes thereof) is found, respectively,
-//        to be less than, to match, or be greater than s2.
-// */
+RETURN VALUE
+       The strcmp() and strncmp() functions return an integer less than, equal  to,  or
+       greater  than  zero if s1 (or the first n bytes thereof) is found, respectively,
+       to be less than, to match, or be greater than s2.
+*/
 // void *memchr(const void *s, int c, size_t n); // The memchr() function scans the initial n bytes of the memory area pointed to by s for the first instance of c.  Both c and the bytes of the memory area  pointed to by s are interpreted as unsigned char.
 // int memcmp(const void *s1, const void *s2, size_t n);
 // /*
