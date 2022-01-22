@@ -6,14 +6,14 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:12:18 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 17:22:04 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stddef.h>
+# include <stddef.h>
 
 int		ft_islowercase(int c);
 int		ft_isuppercase(int c);
@@ -22,7 +22,7 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-size_t	ft_strlen(const char* s);
+size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -41,7 +41,6 @@ int		ft_atoi(const char *nptr);
 
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);
-
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
