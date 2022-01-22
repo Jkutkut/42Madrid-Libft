@@ -6,21 +6,21 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:34:54 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 12:48:37 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:31:18 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(const char* s);
+size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
-size_t ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t s1_len;
-	size_t s2_len;
+	char	*str;
+	size_t	s1_len;
+	size_t	s2_len;
 
 	if (s1 == NULL)
 	{
