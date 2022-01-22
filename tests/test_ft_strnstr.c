@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:10:23 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:04:41 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 21:52:07 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char *strnstr(const char *s, const char *find, size_t slen)
 
 void	test(const char *str, const char *c, size_t n)
 {
-	printf("Test: Data: \"%s\" toFind: %s, n: %lu\n", str, c, n);
+	printf("Test: Data: \"%s\" toFind: \"%s\", n: %lu\n", str, c, n);
 	printf(" - Original: \"%s\"\n", strnstr(str, c, n));
 	printf(" - Custom  : \"%s\"\n", ft_strnstr(str, c, n));	
 }
@@ -60,4 +60,8 @@ int		main(void)
 	test("ESTONO estosi:D", "est", 6);
 	test("ESTONO estosi:D", "est", 7);
 	test("ESTONO estosi:D", "est", 8);
+	test("ESTONO estosi:D", "est", 9);
+	test("ESTONO estosi:D", "est", 10);
+	test("last thing is here", "re", 17);
+	test("aaabcabcd", "cd", 8);
 }
