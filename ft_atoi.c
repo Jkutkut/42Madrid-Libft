@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:53:34 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:57:15 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 22:03:19 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ int	ft_atoi(char *str)
 	number = 0;
 	while (ft_hasany(SPACES, str[i]))
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
-			sign *= -1;
+			sign = -1;
 	while (ft_hasany(NUMBERS, str[i]))
 	{
 		number *= 10;
