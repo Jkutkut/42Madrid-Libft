@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jkutkut <jre-gonz@student.42madrid.com>    +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 19:01:01 by jkutkut           #+#    #+#             */
-/*   Updated: 2022/01/18 09:52:20 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:34:28 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_strlen(const char* s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	l;
 
