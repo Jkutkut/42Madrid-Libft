@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 14:56:33 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 20:38:11 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 20:38:49 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char cc;
+	char	cc;
 
 	cc = (char) c;
 	while (*s && *s != cc)
