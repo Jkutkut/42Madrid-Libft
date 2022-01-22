@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 19:13:36 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 18:04:37 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:25:54 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 void	*ft_memmove(void *dest, const void *source, size_t n)
 {
-	unsigned char *dst;
-	const unsigned char *src;
+	unsigned char		*dst;
+	const unsigned char	*src;
 
 	dst = dest;
 	src = source;
