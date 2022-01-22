@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 11:44:04 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 11:49:31 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 12:35:34 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strdup(const char *s)
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (str == NULL)
 		return (NULL);
-	ft_strlcpy(str, s, ft_strlen(s));
+	ft_strlcpy(str, s, ft_strlen(s) + 1);
 	return (str);
 }
