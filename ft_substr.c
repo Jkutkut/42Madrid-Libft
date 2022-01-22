@@ -6,19 +6,19 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 18:42:25 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 11:35:37 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:36:44 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(const char* s);
-size_t ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	size_t strlen;
+	char	*str;
+	size_t	strlen;
 
 	strlen = ft_strlen(s);
 	if (s == NULL || start > strlen)
