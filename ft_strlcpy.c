@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 11:21:44 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 11:21:51 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:33:41 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_strlen(const char* s);
+size_t	ft_strlen(const char *s);
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dst_l;
