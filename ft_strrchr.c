@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 14:56:33 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:35:16 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 21:04:14 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ size_t	ft_strlen(const char *s);
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
+	char	cc;
 
+	cc = (char)c;
 	i = ft_strlen(s);
-	while (i > 0 && *(s + i) != c)
+	while (i > 0 && *(s + i) != cc)
 		i--;
-	if (*(s + i) == c)
+	if (*(s + i) == cc)
 		return ((char *) s + i);
 	return (NULL);
 }
