@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:53:34 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 18:13:58 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 10:56:53 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 #define MAX_NUM '9'
 
 #define SPACES " \n\v\f\r\t"
+#define NUMBERS "0123456789"
 
-static int	is_number(char c)
-{
-	return (c >= MIN_NUM && c <= MAX_NUM);
-}
+int	ft_hasany(const char *str, char c);
 
 int	ft_atoi(char *str)
 {
@@ -34,7 +32,7 @@ int	ft_atoi(char *str)
 	while (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')
 			sign *= -1;
-	while (is_number(str[i]))
+	while (ft_hasany(NUMBERS, str[i]))
 	{
 		number *= 10;
 		number += (str[i++] - 48);
