@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_memmove.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:10:23 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/18 18:12:02 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 18:53:20 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,17 @@ int		main(void)
 
 	test(cpy_cs, cpy_og + 1, cpy_cs, 6);
 
-	// TODO TEST
+	char tOg[] = {67, 68, 67, 68, 69, 0, 45};
+	printf("Data: \"%s\"\n", tOg);
+	memmove(tOg + 1, tOg, 2);
+	printf(" - Original: \"%s\"\n", tOg);
+
+	char tcs[] = {67, 68, 67, 68, 69, 0, 45};
+	memmove(tcs + 1, tcs, 2);
+	printf(" - Custom  : \"%s\"\n", tcs);
+
+	char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
+
+	printf("og: %d cs: %d \n", memcmp(tOg, sResult2, 7), memcmp(tcs, sResult2, 7));
+
 }
