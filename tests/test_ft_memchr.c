@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:10:23 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 16:31:47 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 20:17:48 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 void	test(const char *str, int c, size_t n)
 {
 	printf("Test: Data: \"%s\" Char: %i (%c), n: %lu\n", str, c, c, n);
-	printf(" - Original: \"%s\"\n", memchr(str, c, n));
-	printf(" - Custom  : \"%s\"\n", ft_memchr(str, c, n));	
+	printf(" - Original: \"%s\"\n", (char *) memchr(str, c, n));
+	printf(" - Custom  : \"%s\"\n", (char *) ft_memchr(str, c, n));
 }
 
 int		main(void)
