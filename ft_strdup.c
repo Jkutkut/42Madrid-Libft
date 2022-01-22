@@ -6,18 +6,18 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 11:44:04 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 12:35:34 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:30:18 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlen(const char* s);
-size_t ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 char	*ft_strdup(const char *s)
 {
-	char *str;
+	char	*str;
 
 	if (s == NULL)
 		return (NULL);
