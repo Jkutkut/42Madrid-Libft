@@ -6,17 +6,17 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 14:56:33 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 15:09:46 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:29:32 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define NULL (void *)0
+#include <stddef.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s && *s != c)
 		s++;
 	if (*s == c)
-		return ((char*) s);
+		return ((char *) s);
 	return (NULL);
 }
