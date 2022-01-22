@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 18:32:48 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 18:38:11 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 16:22:23 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char* p;
-	size_t i;
+	unsigned char	*p;
+	size_t			i;
 
 	p = malloc(count * size);
 	if (p != NULL)
@@ -24,5 +24,5 @@ void	*ft_calloc(size_t count, size_t size)
 		while (i < count * size)
 			*(p + i++) = 0;
 	}
-	return p;
+	return (p);
 }
