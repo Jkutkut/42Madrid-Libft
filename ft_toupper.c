@@ -6,15 +6,15 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:29:11 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:37:49 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/22 17:30:59 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_islowercase(char c);
+int	ft_islower(char c);
 
 int	ft_toupper(char c)
 {
-	if (ft_islowercase(c))
+	if (ft_islower(c))
 		return (c - 32);
 	return (c);
 }
