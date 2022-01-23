@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 19:57:46 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/23 21:48:38 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/23 21:52:29 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static size_t	ft_ndigits(int n);
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	size_t	order;
 	char	d;
