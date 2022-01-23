@@ -19,6 +19,12 @@ echo "${TITLE}
  | |\  | (_) | |  | | | | | | | | | |  __/ |_| ||  __/
  |_| \_|\___/|_|  |_| |_| |_|_|_| |_|\___|\__|\__\___|\n\n${NC}"
 
+if [ "$1" = "--warn" ]; then
+	stopOnError=false
+else
+	stopOnError=true
+fi
+
 for f in $(ls *.h *.c); do
 	if [ ! -f "$f" ]; then
 		echo "${LRED}$f${NC} is not a file"
@@ -34,7 +40,9 @@ for f in $(ls *.h *.c); do
 	{
 		echo "$f: ${LRED}Error!${NC}"
 		sed -n '2,$p' $tmpFile
-		break
+		if [ $stopOnError = true ]; then
+			break
+		fi
 	}
 done
 
