@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:20:17 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/23 19:46:40 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/23 21:56:45 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	**ft_freesplit(char **split)
 	return (NULL);
 }
 
-static size_t ft_countwords(char const *s, char c)
+static size_t	ft_countwords(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -49,7 +49,7 @@ char	**ft_split(char const *s, char c)
 	size = ft_countwords(s, c);
 	arr = malloc(sizeof(char *) * (size + 1));
 	if (arr == NULL)
-		return ft_freesplit(arr);
+		return (ft_freesplit(arr));
 	arr[size] = NULL;
 	if (size == 0)
 		return (arr);
