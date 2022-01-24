@@ -7,5 +7,6 @@ bin
 _test*
 *.pdf
 autoTests
+unit-test
 
 tests/libft.h
