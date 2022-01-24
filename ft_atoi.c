@@ -6,9 +6,12 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:53:34 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 22:03:19 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/24 15:15:38 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
+#include <limits.h>
 
 #define MIN_NUM '0'
 #define MAX_NUM '9'
@@ -20,8 +23,8 @@ int	ft_hasany(const char *str, char c);
 
 int	ft_atoi(char *str)
 {
-	int	number;
-	int	i;
+	size_t	number;
+	size_t	i;
 	int	sign;
 
 	i = 0;
@@ -37,5 +40,9 @@ int	ft_atoi(char *str)
 		number *= 10;
 		number += (str[i++] - 48);
 	}
+	if (number > LONG_MAX && sign < 0)
+        return (0);
+    else if (number > LONG_MAX && sign > 0)
+        return (-1);
 	return (sign * number);
 }
