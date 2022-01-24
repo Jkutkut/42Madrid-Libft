@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 11:44:04 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:30:18 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/24 15:38:57 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strdup(const char *s)
 {
 	char	*str;
 
-	if (s == NULL)
-		return (NULL);
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (str == NULL)
 		return (NULL);
