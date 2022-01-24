@@ -6,13 +6,13 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:24:56 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 17:31:15 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/24 15:29:04 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isupper(char c);
+int	ft_isupper(int c);
 
-int	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	if (ft_isupper(c))
 		return (c + 32);
