@@ -14,4 +14,8 @@
 # Todo:
 - make NAME?
 - split
-- 
+
+
+# Tests:
+- https://github.com/alelievr/libft-unit-test
+- https://github.com/Tripouille/libftTester
