@@ -9,7 +9,8 @@ LIB_NAME=libft.a
 CUSTOM =	bin/ft_islower.o \
 			bin/ft_isupper.o \
 			bin/ft_freearr.o \
-			bin/ft_ndigits.o
+			bin/ft_ndigits.o \
+			bin/ft_hasany.o
 
 MANDAT_1 =	bin/ft_isalpha.o \
 			bin/ft_isdigit.o \
@@ -49,7 +50,7 @@ MANDAT_2 =	bin/ft_substr.o \
 
 MANDATORY = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
 
-BONUS =		bin/ft_atoi.o
+# BONUS =		bin/.o
 
 
 # Compilers:
