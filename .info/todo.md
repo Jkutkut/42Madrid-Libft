@@ -12,6 +12,7 @@
 
 
 # Todo:
+- strlen shield for NULL?
 - make NAME?
 - split
 - remove TODO
@@ -19,7 +20,7 @@
 ## Tests:
 - ft_striteri
 - ft_putchar_fd
-- 
+- ft_putstr_fd
 
 
 # Tests:
