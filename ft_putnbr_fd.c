@@ -6,11 +6,14 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 09:04:13 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/25 09:07:40 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:21:54 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+
 char	*ft_itoa(int n);
+void ft_putstr_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
