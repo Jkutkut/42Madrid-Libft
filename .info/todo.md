@@ -16,6 +16,7 @@
 - make NAME?
 - split
 - remove TODO
+- make help functions static
 
 ## Tests:
 - ft_striteri
