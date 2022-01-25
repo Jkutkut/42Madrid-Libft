@@ -18,6 +18,7 @@
 
 ## Tests:
 - ft_striteri
+- ft_putchar_fd
 - 
 
 
