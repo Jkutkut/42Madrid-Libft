@@ -1,6 +1,6 @@
 # Compiler options
 CC=gcc
-FLAGS=-Wall -Wextra # TODO -Werror
+FLAGS=-Wall -Wextra -Werror
 COMPILE=@$(CC) $(FLAGS)
 LIB_NAME=libft.a
 
@@ -57,7 +57,6 @@ all: $(LIB_NAME)
 bonus: $(LIB_NAME)_bonus
 
 # Binary files
-.PHONY: re fclean clean_lib clean_bin
 $(LIB_NAME): $(MANDATORY)
 	$(info Compiling mandatory into $(LIB_NAME))
 	@ar -crs $(LIB_NAME) $^
@@ -77,11 +76,11 @@ bin/%.o: %.c
 	@$(COMPILE) -c $< -o $@
 
 # Clean logic
-.DELETE_ON_ERROR:
-fclean: clean_lib clean_bin
-	$(info Project cleaned.)
-
+.PHONY: re fclean
 re: fclean all
+
+fclean: clean_lib clean_bin
+	$(info Project now clean.)
 
 clean_lib:
 	$(info Removing $(LIB_NAME))
