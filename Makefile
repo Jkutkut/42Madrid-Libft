@@ -1,5 +1,3 @@
-.PHONY: re fclean clean_lib clean_bin
-
 # Compiler options
 CC=gcc
 FLAGS=-Wall -Wextra # TODO -Werror
@@ -48,73 +46,35 @@ MANDAT_2 =	bin/ft_substr.o \
 			bin/ft_putstr_fd.o \
 			bin/ft_putendl_fd.o \
 			bin/ft_putnbr_fd.o
-# CUSTOM =	ft_islower.o \
-# 			ft_isupper.o \
-# 			ft_freearr.o \
-# 			ft_ndigits.o
-
-# MANDAT_1 =	ft_isalpha.o \
-# 			ft_isdigit.o \
-# 			ft_isalnum.o \
-# 			ft_isascii.o \
-# 			ft_isprint.o \
-# 			ft_strlen.o \
-# 			ft_memset.o \
-# 			ft_bzero.o \
-# 			ft_memcpy.o \
-# 			ft_memmove.o \
-# 			ft_strlcpy.o \
-# 			ft_strlcat.o \
-# 			ft_toupper.o \
-# 			ft_tolower.o \
-# 			ft_strchr.o \
-# 			ft_strrchr.o \
-# 			ft_strncmp.o \
-# 			ft_memchr.o \
-# 			ft_memcmp.o \
-# 			ft_strnstr.o \
-# 			ft_atoi.o \
-# 			ft_calloc.o \
-# 			ft_strdup.o
-
-# MANDAT_2 =	ft_substr.o \
-# 			ft_strjoin.o \
-# 			ft_strtrim.o \
-# 			ft_split.o \
-# 			ft_itoa.o \
-# 			ft_strmapi.o \
-# 			ft_striteri.o \
-# 			ft_putchar_fd.o \
-# 			ft_putstr_fd.o \
-# 			ft_putendl_fd.o \
-# 			ft_putnbr_fd.o
-
-# BONUS = 
 
 MANDATORY = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
 
+BONUS =		bin/ft_atoi.o
+
+
 # Compilers:
 all: $(LIB_NAME)
-
+bonus: $(LIB_NAME)_bonus
 
 # Binary files
+.PHONY: re fclean clean_lib clean_bin
 $(LIB_NAME): $(MANDATORY)
-	$(info Object files ready)
 	$(info Compiling mandatory into $(LIB_NAME))
 	@ar -crs $(LIB_NAME) $^
 
 	@cp -f libft.h tests/ # ! DEBUG
 
+$(LIB_NAME)_bonus: $(MANDATORY) $(BONUS)
+	$(info Compiling bonus into $(LIB_NAME))
+	@ar -crs $(LIB_NAME) $^
 
-bin:
-	$(info Creating bin directory to store all object files)
-	@mkdir bin
+	@cp -f libft.h tests/ # ! DEBUG
 
-# %.o: %.c
-bin/%.o: %.c bin
+
+bin/%.o: %.c
 	@echo "- Compiling $< -> $@"
+	@mkdir -p bin
 	@$(COMPILE) -c $< -o $@
-
 
 # Clean logic
 .DELETE_ON_ERROR:
