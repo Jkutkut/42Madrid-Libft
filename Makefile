@@ -60,8 +60,7 @@ $(LIB_NAME): binaries
 	$(info Compiling all into $(LIB_NAME))
 	@ar -crs $(LIB_NAME) $(FUNCTIONS)
 
-	@# ! debug
-	@cp -f libft.h tests/
+	@cp -f libft.h tests/ # ! DEBUG
 
 binaries: $(FUNCTIONS)
 	$(info Object files ready)
@@ -70,23 +69,23 @@ bin:
 	$(info Creating bin directory to store all object files)
 	@mkdir bin
 
+# %.o: %.c
 bin/%.o: %.c bin
-	@#if [ ! -d $(dir $@) ]; then echo "Creating $(dir $@)"; mkdir -p $(dir $@); fi
 	@echo "- Compiling $< -> $@"
 	@$(COMPILE) -c $< -o $@
 
 
 # Clean logic
 .DELETE_ON_ERROR:
-fclean: clean_main clean_bin
+fclean: clean_lib clean_bin
 	$(info Project cleaned.)
 
 re: fclean all
 
-clean_main:
+clean_lib:
 	$(info Removing $(LIB_NAME))
 	@rm -f $(LIB_NAME)
-	rm -f tests/$(LIB_NAME) tests/libft.h
+	rm -f tests/libft.h # ! DEBUG
 
 clean_bin:
 	$(info Removing binary directory)
