@@ -16,6 +16,10 @@
 - split
 - remove TODO
 
+## Tests:
+- ft_striteri
+- 
+
 
 # Tests:
 - https://github.com/alelievr/libft-unit-test
