@@ -6,13 +6,13 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 09:00:36 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/25 19:13:55 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:44:35 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void ft_putstr_fd(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 void	ft_putendl_fd(char *s, int fd)
 {
