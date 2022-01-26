@@ -11,13 +11,23 @@
 # **************************************************************************** #
 
 
-# Todo:
-- strlen shield for NULL?
+# Todo
 - make NAME?
 - split
+	- static functions
 - remove TODO
 - make help functions static
 
+# Bonus:
+- ft_lstnew
+- ft_lstadd_front
+- ft_lstsize
+- ft_lstlast
+- ft_lstadd_back
+- ft_lstdelone
+- ft_lstclear
+- ft_lstiter
+- ft_lstmap
 
 # Tests:
 - https://github.com/alelievr/libft-unit-test
