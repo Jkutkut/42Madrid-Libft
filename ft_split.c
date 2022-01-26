@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:20:17 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 16:03:22 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 16:11:29 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,12 +73,6 @@ char	**ft_split(char const *s, char c)
 			i++;
 		arr[index++] = ft_substr(s, start, i - start);
 		if (arr[index - 1] == NULL)
-			return (ft_freesplit(arr));
-	}
-	if (i == 0)
-	{
-		arr[i] = ft_strdup("");
-		if (arr[i] == NULL)
 			return (ft_freesplit(arr));
 	}
 	return (arr);
