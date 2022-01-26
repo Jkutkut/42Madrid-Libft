@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:45:25 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 10:37:39 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:45:23 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
-
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
