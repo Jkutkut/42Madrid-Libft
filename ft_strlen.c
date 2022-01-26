@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 19:01:01 by jkutkut           #+#    #+#             */
-/*   Updated: 2022/01/22 16:34:28 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:38:15 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	l;
 
+	if (s == NULL)
+		return (0);
 	l = 0;
 	while (*(s + l))
 		l++;
