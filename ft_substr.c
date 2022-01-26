@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 18:42:25 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/24 22:21:59 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 09:58:20 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			str[0] = '\0';
 		return (str);
 	}
-	if (len > strlen)
+	if (len > strlen - start)
 		len = strlen - start;
 	str = malloc(sizeof(char) * len + 1);
 	if (str == NULL)
