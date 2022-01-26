@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:44:45 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/23 19:44:23 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 15:19:59 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,11 @@ void	test(const char *str, char c)
 
 int		main(void)
 {
-	test("hola que tal", ' ');
-	test("hola que tal", '-');
+	test("hola que  tal", ' ');
+	test("   hola   que tal    ", '-');
 	test("", ' ');
+	test("ssssssss", 's');
+	test("ssss ssss", 's');
+	test("ssss s sss", 's');
 	test(NULL, ' ');
-	test("s-s--s--ss", 's');
 }
