@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:10:23 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:04:34 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:33:13 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ int		main(void)
 	test("Hola caracola", "-");
 	test("-Hola caracola-", "-");
 	test("--Hola caracola--", "-");
-	test("*******Hola caracola", "*******");
-	test("Hola caracola*******", "*******");
+	test("*******Hola caracola", "*");
+	test("Hola caracola*******", "*");
 	test(NULL, "-");
 	test("-hola-", NULL);
 	test("", "-");
 	test("hola", "");
+	test(" - - -- - -  ----hola - - --- -- ", "- ");
+
 }
