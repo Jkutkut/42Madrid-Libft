@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:01:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 18:35:56 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 19:04:49 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		ft_lstsize(t_list *lst)
 {
-	return (0);
+	if (lst == NULL || lst->next == NULL)
+		return (0);
+	return (1 + ft_lstsize(lst->next));
 }
