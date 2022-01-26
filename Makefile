@@ -51,7 +51,7 @@ MANDAT_2 =	bin/ft_substr.o \
 MANDATORY = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
 
 BONUS =		bin/ft_lstnew_bonus.o \
-			# bin/ft_lstadd_front_bonus.o \
+			bin/ft_lstadd_front_bonus.o \
 			# bin/ft_lstsize_bonus.o \
 			# bin/ft_lstlast_bonus.o \
 			# bin/ft_lstadd_back_bonus.o \
