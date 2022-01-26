@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:45:25 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/25 18:18:59 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/26 10:37:39 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 	size_t	len;
-	char	*str;
 
 	if (s == NULL)
 		return ;
 	len = ft_strlen(s);
-	str = ft_strdup(s);
-	if (str == NULL)
-		return ;
 	i = 0;
 	while (i < len)
 	{
-		f(i, &str[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
