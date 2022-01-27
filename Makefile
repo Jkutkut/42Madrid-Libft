@@ -73,7 +73,7 @@ $(LIB_NAME): $(MANDATORY)
 
 bonus: $(MANDATORY) $(BONUS)
 	$(info Compiling bonus into $(LIB_NAME))
-	ar rc $(LIB_NAME) $^
+	@ar rc $(LIB_NAME) $^
 
 	@cp -f libft.h tests/ # ! DEBUG
 
