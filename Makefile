@@ -4,7 +4,6 @@ FLAGS=-Wall -Wextra -Werror
 COMPILE=@$(CC) $(FLAGS)
 LIB_NAME=libft.a
 
-
 # Binaries variables
 CUSTOM =	bin/ft_islower.o \
 			bin/ft_isupper.o \
@@ -50,7 +49,7 @@ MANDAT_2 =	bin/ft_substr.o \
 
 MANDATORY = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
 
-BONUS =		bin/ft_lstnew_bonus.o \
+BONUS_OBJ =	bin/ft_lstnew_bonus.o \
 			bin/ft_lstadd_front_bonus.o \
 			bin/ft_lstsize_bonus.o \
 			bin/ft_lstlast_bonus.o \
@@ -60,23 +59,15 @@ BONUS =		bin/ft_lstnew_bonus.o \
 			bin/ft_lstiter_bonus.o \
 			bin/ft_lstmap_bonus.o
 
-
-# Compilers:
 all: $(LIB_NAME)
 
-# Binary files
 $(LIB_NAME): $(MANDATORY)
 	$(info Compiling mandatory into $(LIB_NAME))
 	@ar rc $(LIB_NAME) $^
 
-	@cp -f libft.h tests/ # ! DEBUG
-
-bonus: $(MANDATORY) $(BONUS)
+bonus: $(MANDATORY) $(BONUS_OBJ)
 	$(info Compiling bonus into $(LIB_NAME))
 	@ar rc $(LIB_NAME) $^
-
-	@cp -f libft.h tests/ # ! DEBUG
-
 
 bin/%.o: %.c
 	@echo "- Compiling $< -> $@"
@@ -85,16 +76,12 @@ bin/%.o: %.c
 
 # Clean logic
 .PHONY: re fclean
-re: fclean all
+re: fclean bonus
 
-fclean: clean_lib clean_bin
-	$(info Project now clean.)
-
-clean_lib:
+fclean:
 	$(info Removing $(LIB_NAME))
 	@rm -f $(LIB_NAME)
-	rm -f tests/libft.h # ! DEBUG
-
-clean_bin:
 	$(info Removing binary directory)
 	@rm -rf ./bin
+	$(info Project now clean.)
+
