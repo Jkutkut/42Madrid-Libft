@@ -67,14 +67,13 @@ all: $(LIB_NAME)
 # Binary files
 $(LIB_NAME): $(MANDATORY)
 	$(info Compiling mandatory into $(LIB_NAME))
-	@ar -crs $(LIB_NAME) $^
+	@ar rc $(LIB_NAME) $^
 
 	@cp -f libft.h tests/ # ! DEBUG
 
 bonus: $(MANDATORY) $(BONUS)
 	$(info Compiling bonus into $(LIB_NAME))
 	ar rc $(LIB_NAME) $^
-	@#ar -crs $(LIB_NAME) $^
 
 	@cp -f libft.h tests/ # ! DEBUG
 
