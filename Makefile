@@ -56,7 +56,7 @@ BONUS =		bin/ft_lstnew_bonus.o \
 			bin/ft_lstlast_bonus.o \
 			bin/ft_lstadd_back_bonus.o \
 			bin/ft_lstdelone_bonus.o \
-			# bin/ft_lstclear_bonus.o \
+			bin/ft_lstclear_bonus.o \
 			# bin/ft_lstiter_bonus.o \
 			# bin/ft_lstmap_bonus.o
 
