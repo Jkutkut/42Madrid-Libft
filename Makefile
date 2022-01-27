@@ -63,7 +63,6 @@ BONUS =		bin/ft_lstnew_bonus.o \
 
 # Compilers:
 all: $(LIB_NAME)
-# bonus: $(LIB_NAME)_bonus
 
 # Binary files
 $(LIB_NAME): $(MANDATORY)
@@ -74,7 +73,8 @@ $(LIB_NAME): $(MANDATORY)
 
 bonus: $(MANDATORY) $(BONUS)
 	$(info Compiling bonus into $(LIB_NAME))
-	@ar -crs $(LIB_NAME) $^
+	ar rc $(LIB_NAME) $^
+	@#ar -crs $(LIB_NAME) $^
 
 	@cp -f libft.h tests/ # ! DEBUG
 
