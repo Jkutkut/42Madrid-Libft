@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 17:59:52 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 18:59:14 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/27 18:02:04 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	e->content = content;
 	e->next = NULL;
-	return (content);
+	return (e);
 }
