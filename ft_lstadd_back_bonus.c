@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:02:58 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 18:03:31 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/27 11:20:11 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-
+	if (!lst || !new || *lst == NULL)
+		return ;
+	if (*lst != NULL)
+		ft_lstadd_back(&((*lst)->next), new);
+	(*lst)->next = new;
 }
