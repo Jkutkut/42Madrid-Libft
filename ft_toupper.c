@@ -6,11 +6,14 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 16:29:11 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/24 15:28:53 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/27 23:06:22 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_islower(int c);
+static int	ft_islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
 
 int	ft_toupper(int c)
 {

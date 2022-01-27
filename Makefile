@@ -5,12 +5,6 @@ COMPILE=@$(CC) $(FLAGS)
 LIB_NAME=libft.a
 
 # Binaries variables
-CUSTOM =	bin/ft_islower.o \
-			bin/ft_isupper.o \
-			bin/ft_freearr.o \
-			bin/ft_ndigits.o \
-			bin/ft_hasany.o
-
 MANDAT_1 =	bin/ft_isalpha.o \
 			bin/ft_isdigit.o \
 			bin/ft_isalnum.o \
@@ -47,7 +41,7 @@ MANDAT_2 =	bin/ft_substr.o \
 			bin/ft_putendl_fd.o \
 			bin/ft_putnbr_fd.o
 
-MANDATORY = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
+MANDATORY = $(MANDAT_1) $(MANDAT_2)
 
 BONUS_OBJ =	bin/ft_lstnew_bonus.o \
 			bin/ft_lstadd_front_bonus.o \
@@ -85,3 +79,6 @@ fclean:
 	@rm -rf ./bin
 	$(info Project now clean.)
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(wildcard *.c)
+	gcc -nostartfiles -shared -o libft.so $(MANDATORY) $(BONUS_OBJ)

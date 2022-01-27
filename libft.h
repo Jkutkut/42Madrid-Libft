@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 17:48:29 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/01/27 23:16:57 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <stddef.h>
 # include <stdlib.h>
-
-int		ft_islower(int c);
-int		ft_isupper(int c);
-void	ft_freearr(char **arr);
-size_t	ft_ndigits(int n);
-int		ft_hasany(const char *str, char c);
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
