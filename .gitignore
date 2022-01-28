@@ -7,9 +7,9 @@ bin
 _test*
 *.pdf
 autoTests
-unit-test
 test1
 test2
 test3
 
 tests/libft.h
+libft.so
