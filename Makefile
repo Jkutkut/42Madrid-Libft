@@ -64,10 +64,11 @@ bin/%.o: %.c
 .PHONY: re fclean
 re: fclean all
 
-fclean:
+fclean: clean
+
+clean:
 	$(info Removing $(NAME))
 	@rm -f $(NAME)
 	$(info Removing binary directory)
 	@rm -rf ./bin
-	@#rm -f $(MANDATORY_OBJ) $(BONUS_OBJ)
 	$(info Project now clean.)
