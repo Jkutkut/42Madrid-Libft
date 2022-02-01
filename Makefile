@@ -5,6 +5,16 @@ COMPILE=@$(CC) $(FLAGS)
 NAME=libft.a
 HEADER = libft.h
 
+# Colors:
+NC				=	\033[0m
+RED				=	\033[0;31m
+GREEN			=	\033[0;32m
+LRED			=	\033[1;31m
+LGREEN			=	\033[1;32m
+YELLOW			=	\033[1;33m
+LBLUE			=	\033[1;34m
+TITLE			=	\033[38;5;33m
+
 # Binaries variables
 MANDAT_1 =	ft_isalpha.c	ft_toupper.c	\
 			ft_isdigit.c	ft_tolower.c	\
@@ -43,32 +53,38 @@ BONUS_SRC =	ft_lstnew_bonus.c \
 			ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c
+
 BONUS_OBJ = $(BONUS_SRC:%.c=bin/%.o)
 
 all: bonus
 
 $(NAME): $(MANDATORY_OBJ)
-	$(info Compiling MANDATORY_OBJ into $(NAME))
+	@echo -n "\n${TITLE}Compiling${NC} ${YELLOW}mandatory${NC} into ${YELLOW}$(NAME)${NC}"
 	@ar -rcs $(NAME) $(MANDATORY_OBJ) $(HEADER)
+	@echo " ${GREEN}[OK]${NC}\n"
 
 bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
-	$(info Compiling bonus into $(NAME))
+	@echo -n "\n${TITLE}Compiling${NC} ${YELLOW}bonus${NC} into ${YELLOW}$(NAME)${NC}"
 	@ar -rcs $(NAME) $(MANDATORY_OBJ) $(BONUS_OBJ) $(HEADER)
+	@echo " ${GREEN}[OK]${NC}\n"
 
 bin/%.o: %.c
-	@echo "- Compiling $< -> $@"
+	@echo -n "- ${TITLE}Compiling${NC} $< -> $@"
 	@mkdir -p ${dir $@}
 	@$(COMPILE) -c $< -o $@
+	@echo " ${GREEN}[OK]${NC}"
 
 # Clean logic
 .PHONY: re fclean
+
 re: fclean all
 
 fclean: clean
 
 clean:
-	$(info Removing $(NAME))
+	@echo "${TITLE}Cleaning${NC}"
+	@echo "- ${RED}Removing${NC} $(NAME)"
 	@rm -f $(NAME)
-	$(info Removing binary directory)
+	@echo "- ${RED}Removing${NC} binary directory"
 	@rm -rf ./bin
-	$(info Project now clean.)
+	@echo "Project ${GREEN}clean${NC}.\n"
