@@ -59,17 +59,17 @@ BONUS_OBJ = $(BONUS_SRC:%.c=bin/%.o)
 all: bonus
 
 $(NAME): $(MANDATORY_OBJ)
-	@echo -n "\n${TITLE}Compiling${NC} ${YELLOW}mandatory${NC} into ${YELLOW}$(NAME)${NC}"
+	@echo "\n${TITLE}Compiling${NC} ${YELLOW}mandatory${NC} into ${YELLOW}$(NAME)${NC}\c"
 	@ar -rcs $(NAME) $(MANDATORY_OBJ) $(HEADER)
 	@echo " ${GREEN}[OK]${NC}\n"
 
 bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
-	@echo -n "\n${TITLE}Compiling${NC} ${YELLOW}bonus${NC} into ${YELLOW}$(NAME)${NC}"
+	@echo "\n${TITLE}Compiling${NC} ${YELLOW}bonus${NC} into ${YELLOW}$(NAME)${NC}\c"
 	@ar -rcs $(NAME) $(MANDATORY_OBJ) $(BONUS_OBJ) $(HEADER)
 	@echo " ${GREEN}[OK]${NC}\n"
 
 bin/%.o: %.c
-	@echo -n "- ${TITLE}Compiling${NC} $< -> $@"
+	@echo "- ${TITLE}Compiling${NC} $< -> $@\c"
 	@mkdir -p ${dir $@}
 	@$(COMPILE) -c $< -o $@
 	@echo " ${GREEN}[OK]${NC}"
