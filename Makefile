@@ -56,7 +56,7 @@ BONUS_SRC =	ft_lstnew_bonus.c \
 
 BONUS_OBJ = $(BONUS_SRC:%.c=bin/%.o)
 
-all: bonus
+all: $(NAME)
 
 $(NAME): $(MANDATORY_OBJ)
 	@echo "\n${TITLE}Compiling${NC} ${YELLOW}mandatory${NC} into ${YELLOW}$(NAME)${NC}\c"
@@ -64,9 +64,9 @@ $(NAME): $(MANDATORY_OBJ)
 	@echo " ${GREEN}[OK]${NC}\n"
 
 bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
-	@echo "\n${TITLE}Compiling${NC} ${YELLOW}bonus${NC} into ${YELLOW}$(NAME)${NC}\c"
-	@ar -rcs $(NAME) $(MANDATORY_OBJ) $(BONUS_OBJ) $(HEADER)
-	@echo " ${GREEN}[OK]${NC}\n"
+	@echo "\n${TITLE}Compiling${NC} ${YELLOW}bonus${NC} into ${YELLOW}$(NAME)${NC}"
+	@make MANDATORY_OBJ="$(MANDATORY_OBJ) $(BONUS_OBJ)"
+	@echo "${YELLOW}bonus${NC} ${GREEN}[OK]${NC}\n"
 
 bin/%.o: %.c
 	@echo "- ${TITLE}Compiling${NC} $< -> $@\c"
