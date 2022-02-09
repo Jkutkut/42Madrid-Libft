@@ -16,6 +16,8 @@ LBLUE			=	\033[1;34m
 TITLE			=	\033[38;5;33m
 
 # Binaries variables
+CUSTOM	=	ft_hasany.c
+
 MANDAT_1 =	ft_isalpha.c	ft_toupper.c	\
 			ft_isdigit.c	ft_tolower.c	\
 			ft_isalnum.c	ft_strchr.c		\
@@ -41,7 +43,7 @@ MANDAT_2 =	ft_substr.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-MANDATORY_SRC = $(MANDAT_1) $(MANDAT_2)
+MANDATORY_SRC = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
 MANDATORY_OBJ = $(MANDATORY_SRC:%.c=bin/%.o)
 
 BONUS_SRC =	ft_lstnew_bonus.c \
