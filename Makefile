@@ -16,7 +16,9 @@ LBLUE			=	\033[1;34m
 TITLE			=	\033[38;5;33m
 
 # Binaries variables
-CUSTOM	=	ft_hasany.c
+CUSTOM	=	ft_hasany.c \
+			ft_islower \
+			ft_isupper
 
 MANDAT_1 =	ft_isalpha.c	ft_toupper.c	\
 			ft_isdigit.c	ft_tolower.c	\
