@@ -17,9 +17,9 @@ TITLE			=	\033[38;5;33m
 
 # Binaries variables
 CUSTOM	=	ft_hasany.c \
-			ft_islower \
-			ft_isupper \
-			ft_ndigits
+			ft_islower.c \
+			ft_isupper.c \
+			ft_ndigits.c
 
 MANDAT_1 =	ft_isalpha.c	ft_toupper.c	\
 			ft_isdigit.c	ft_tolower.c	\
