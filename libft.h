@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/02/09 12:23:28 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/02/09 12:26:23 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_hasany(const char *str, char c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
+size_t	ft_ndigits(int n);
 
 #endif
