@@ -6,28 +6,13 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 19:57:46 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/27 23:11:54 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/02/09 12:26:15 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static size_t	ft_ndigits(int n)
-{
-	size_t	order;
-
-	if (!n)
-		return (1);
-	order = 0;
-	if (n < 0)
-		order++;
-	while (n != 0)
-	{
-		order++;
-		n /= 10;
-	}
-	return (order);
-}
+size_t	ft_ndigits(int n);
 
 char	*ft_itoa(int n)
 {
