@@ -85,11 +85,11 @@ bin/%.o: %.c
 re: fclean all
 
 fclean: clean
-
-clean:
-	@echo "${TITLE}Cleaning${NC}"
-	@echo "- ${RED}Removing${NC} $(NAME)"
-	@rm -f $(NAME)
 	@echo "- ${RED}Removing${NC} binary directory"
 	@rm -rf ./bin
 	@echo "Project ${GREEN}clean${NC}.\n"
+
+clean:
+	@echo "- ${RED}Removing${NC} $(NAME)"
+	@rm -f $(NAME)
+	
