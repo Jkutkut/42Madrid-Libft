@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 13:08:15 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/02/09 12:27:23 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 13:39:59 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@ size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_hasany(const char *str, char c);
 
+/**
+ * @brief Removes any character in set from the beginning and end of a string.
+ * 
+ * @param s1 String to trim.
+ * @param set Set of characters to remove.
+ * @return char* Trimmed string.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s1_len;
