@@ -6,12 +6,21 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 19:13:36 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 19:22:43 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:49:01 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Copies n bytes from memory area src to memory area dst.
+ * The memory areas can overlap, the logic handles this case.
+ * 
+ * @param dest Destination memory area.
+ * @param source Source memory area.
+ * @param n Number of bytes to copy.
+ * @return void* Same pointer as dest.
+ */
 void	*ft_memmove(void *dest, const void *source, size_t n)
 {
 	unsigned char		*dst;
