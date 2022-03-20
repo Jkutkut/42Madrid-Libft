@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 18:42:25 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 09:58:20 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 13:39:06 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
+/**
+ * @brief Copies a substring of a string.
+ * 
+ * @param s Original string.
+ * @param start Start index of the substring.
+ * @param len Length of the substring.
+ * @return char* Substring.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
