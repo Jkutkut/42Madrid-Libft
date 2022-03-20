@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 19:57:46 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/02/09 12:26:15 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:58:03 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 size_t	ft_ndigits(int n);
 
+/**
+ * @brief Returns a string representation of an integer.
+ * 
+ * @param n Integer to represent.
+ * @return char* String representation of the integer.
+ */
 char	*ft_itoa(int n)
 {
 	size_t	order;
