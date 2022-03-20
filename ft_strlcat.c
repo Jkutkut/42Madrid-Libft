@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 09:25:05 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/23 12:16:20 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:33:52 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 
 size_t	ft_strlen(const char *s);
 
+/**
+ * @brief Concatenates the string src to the string dst.
+ * 
+ * @param dst Destination string.
+ * @param src Source string.
+ * @param size Maximum number of characters to concatenate.
+ * @return size_t Number of characters concatenated.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
 	char		*dst_cpy;
