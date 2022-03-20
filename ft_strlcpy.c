@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 11:21:44 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 16:33:41 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:28:16 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 
 size_t	ft_strlen(const char *s);
 
+/**
+ * @brief Copies up to size characters from src to dst.
+ * 
+ * @param dst Destination string.
+ * @param src Source string.
+ * @param size Maximum number of characters to copy.
+ * @return size_t Number of characters copied.
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
