@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:20:17 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/27 23:17:53 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:42:47 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
 
+/**
+ * @brief Frees the memory of a string array.
+ * 
+ * @param arr String array to free.
+ * @return char** Returns always NULL.
+ */
 static char	**ft_freesplit(char **arr)
 {
 	size_t	i;
@@ -31,6 +37,13 @@ static char	**ft_freesplit(char **arr)
 	return (NULL);
 }
 
+/**
+ * @brief Calculates the number of elements of a array resulting from a split.
+ * 
+ * @param s String to split.
+ * @param c Character as delimeter.
+ * @return size_t Number of elements.
+ */
 static size_t	ft_countelements(char const *s, char c)
 {
 	size_t	i;
@@ -53,6 +66,13 @@ static size_t	ft_countelements(char const *s, char c)
 	return (count);
 }
 
+/**
+ * @brief Allocates the requiered memory for a string array.
+ * 
+ * @param s String to split.
+ * @param c Character as delimeter.
+ * @return char** String array pointer.
+ */
 static char	**init_split(char const *s, char c)
 {
 	char	**arr;
@@ -68,6 +88,15 @@ static char	**init_split(char const *s, char c)
 	return (arr);
 }
 
+/**
+ * @brief Splits a string into an array of strings using a delimiter.
+ * The resulting array is terminated with a NULL pointer.
+ * If consecutive dilimiters occur, a empty/NULL elemente is not inserted.
+ * 
+ * @param s String to split.
+ * @param c Delimiter.
+ * @return char** Array of strings NULL terminated.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
