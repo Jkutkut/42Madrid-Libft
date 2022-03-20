@@ -6,12 +6,23 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 18:01:16 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 20:28:55 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 15:50:26 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Compares the first n bytes of two memory areas.
+ * If the content is equal, 0 is returned.
+ * If the content is different, the difference between the first different
+ * byte is returned.
+ * 
+ * @param s1 Pointer to the first memory area.
+ * @param s2 Pointer to the second memory area.
+ * @param n Number of bytes to compare.
+ * @return int Result of the comparation.
+ */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*mem1;
