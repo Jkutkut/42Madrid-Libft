@@ -6,12 +6,21 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:46:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/22 21:48:30 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/03/20 13:42:21 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
+/**
+ * @brief Returns a pointer to the first occurrence of needle in haystack.
+ * If not found, returns NULL.
+ * 
+ * @param str String to search in.
+ * @param needle String to search.
+ * @param len Maximum number of characters to search.
+ * @return char* Pointer to the first occurrence or NULL.
+ */
 char	*ft_strnstr(const char *str, const char *needle, size_t len)
 {
 	size_t	i;
