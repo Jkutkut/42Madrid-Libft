@@ -16,6 +16,8 @@ LBLUE			=	\033[1;34m
 TITLE			=	\033[38;5;33m
 
 # Binaries variables
+BIN		=	bin
+
 CUSTOM	=	ft_hasany.c \
 			ft_islower.c \
 			ft_isupper.c \
@@ -47,7 +49,7 @@ MANDAT_2 =	ft_substr.c \
 			ft_putnbr_fd.c
 
 MANDATORY_SRC = $(MANDAT_1) $(MANDAT_2) $(CUSTOM)
-MANDATORY_OBJ = $(MANDATORY_SRC:%.c=bin/%.o)
+MANDATORY_OBJ = $(MANDATORY_SRC:%.c=$(BIN)/%.o)
 
 BONUS_SRC =	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
@@ -59,7 +61,7 @@ BONUS_SRC =	ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c
 
-BONUS_OBJ = $(BONUS_SRC:%.c=bin/%.o)
+BONUS_OBJ = $(BONUS_SRC:%.c=$(BIN)/%.o)
 
 all: $(NAME)
 
@@ -73,7 +75,7 @@ bonus: $(MANDATORY_OBJ) $(BONUS_OBJ)
 	@make MANDATORY_OBJ="$(MANDATORY_OBJ) $(BONUS_OBJ)"
 	@echo "${YELLOW}bonus${NC} ${GREEN}[OK]${NC}\n"
 
-bin/%.o: %.c
+$(BIN)/%.o: %.c
 	@echo "- ${TITLE}Compiling${NC} $< -> $@\c"
 	@mkdir -p ${dir $@}
 	@$(COMPILE) -c $< -o $@
@@ -86,7 +88,7 @@ re: fclean all
 
 fclean: clean
 	@echo "- ${RED}Removing${NC} binary directory"
-	@rm -rf ./bin
+	@rm -rf $(BIN)
 	@echo "Project ${GREEN}clean${NC}.\n"
 
 clean:
