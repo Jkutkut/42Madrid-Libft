@@ -46,9 +46,37 @@ LIST		=	ft_lstadd_back_bonus.c \
 				ft_lstnew_bonus.c \
 				ft_lstsize_bonus.c
 
+MODIFY		=	ft_atoi.c \
+				ft_bzero.c \
+				ft_calloc.c \
+				ft_itoa.c \
+				ft_memcpy.c \
+				ft_memmove.c \
+				ft_memset.c \
+				ft_split.c \
+				ft_strdup.c \
+				ft_striteri.c \
+				ft_strjoin.c \
+				ft_strlcat.c \
+				ft_strlcpy.c \
+				ft_strmapi.c \
+				ft_strtrim.c \
+				ft_substr.c \
+				ft_tolower.c \
+				ft_toupper.c
+
+PRINT		=	ft_putchar_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c \
+				ft_putstr_fd.c
 
 
-LIBFT = 
+LIBFT_CODE	=	$(ANALYZE:%=analyze/%) \
+				$(MODIFY:%=modify/%) \
+				$(PRINT:%=print/%)
+
+LIBFT_C_B	= 	$(LIBFT_CODE) \
+				$(LIST:%=list/%)
 
 # CUSTOM	=	ft_hasany.c \
 # 			ft_islower.c \
