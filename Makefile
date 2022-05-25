@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/05/25 09:48:21 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/05/25 09:49:42 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,7 +103,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "\n${TITLE}Compiling${NC} ${YELLOW}libft${NC} into ${YELLOW}$(NAME)${NC}\c"
-	@ar -rcs $(NAME) $(OBJ) $(HEADER)
+	@ar -rcs $(NAME) $(OBJ)
 	@echo " ${GREEN}[OK]${NC}\n"
 
 $(BIN)/%.o: $(SRC)/%.c
