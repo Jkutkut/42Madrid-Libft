@@ -1,7 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
+#    Updated: 2022/05/25 09:48:21 by jre-gonz         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# Binaries variables
+BIN			=	bin# Bin location
+SRC			=	src# Source location
+INCLUDE_L	=	include# Include location
+
 # Compiler options
 CC			=	gcc
 FLAGS		=	-Wall -Wextra -Werror
-COMPILE		=	@$(CC) $(FLAGS)
+INCLUDE		=	-I./$(INCLUDE_L)
+COMPILE		=	@$(CC) $(FLAGS) $(INCLUDE)
 NAME		=	libft.a
 HEADER		=	libft.h
 
@@ -14,11 +32,6 @@ LGREEN		=	\033[1;32m
 YELLOW		=	\033[1;33m
 LBLUE		=	\033[1;34m
 TITLE		=	\033[38;5;33m
-
-# Binaries variables
-BIN			=	bin# Bin location
-SRC			=	.# Source location
-INCLUDE		=	include# Include location
 
 # Default libft code
 ANALYZE		=	ft_hasany.c \
@@ -73,16 +86,18 @@ PRINT		=	ft_putchar_fd.c \
 				ft_putstr_fd.c
 
 
-LIBFT_SRC	=	$(ANALYZE:%=analyze/%) \
-				$(MODIFY:%=modify/%) \
-				$(PRINT:%=print/%) \
-				$(LIST:%=list/%) # Bonus
+LIBFT_SRC	=	$(ANALYZE:%=libft/analyze/%) \
+				$(MODIFY:%=libft/modify/%) \
+				$(PRINT:%=libft/print/%) \
+				$(LIST:%=libft/list/%) # Bonus
 
 SOURCE		=	$(LIBFT_SRC) # Libft files
 
 SRC_CODE	=	$(SOURCE:%=$(SRC)/%)
-$(info $(SRC_CODE))
 OBJ			=	$(SRC_CODE:$(SRC)/%.c=$(BIN)/%.o)
+
+
+# Triggers
 
 all: $(NAME)
 
