@@ -1,10 +1,16 @@
 #!/bin/bash
 
-dirsToRemove=".git .info .tests"
+if [ -d .git ]; then
+	location="./"
+else
+	location="../"
+fi
+
+dirsToRemove=".git .info .tests .vscode bin scripts"
 filesToRemove=".gitignore"
 
 echo "Removing directories:\n$dirsToRemove"
-rm -rf $dirsToRemove
+rm -rf $location$dirsToRemove
 
 echo "Removing files"
 rm $filesToRemove
