@@ -5,6 +5,7 @@ LIBFT		=	../libft/# Libft location
 # Compiler options
 CC				=	@gcc
 FLAGS			=	-Wall -Wextra -Werror
+INCLUDE			=	-I ../../include/
 COMPILE			=	$(CC) $(FLAGS) $(INCLUDE)
 LIB_COMPILE		=	@ar rcs
 
