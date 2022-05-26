@@ -6,11 +6,11 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 19:01:01 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/27 23:01:04 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:38:38 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *s)
 {

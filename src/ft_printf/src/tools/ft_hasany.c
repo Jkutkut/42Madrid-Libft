@@ -6,11 +6,11 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 12:15:56 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/02/13 23:07:35 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:40:40 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "ft_printf.h"
 
 int	ft_hasany(const char *str, char c)
 {

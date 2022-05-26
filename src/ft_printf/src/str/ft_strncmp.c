@@ -6,11 +6,11 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 11:30:28 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/24 15:36:40 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:38:38 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "ft_printf.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

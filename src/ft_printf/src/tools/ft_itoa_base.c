@@ -6,15 +6,11 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:38:02 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/02/06 00:17:46 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:39:31 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-size_t	ft_nbrlen(size_t n, size_t base_len);
+#include "ft_printf.h"
 
 char	*ft_itoa_base(ssize_t nbr, char *base)
 {

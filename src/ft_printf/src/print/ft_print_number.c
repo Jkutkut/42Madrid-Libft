@@ -6,11 +6,11 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 13:41:51 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/05/06 16:25:24 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:38:38 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "ft_printf.h"
 
 int	ft_print_number(int fd, char type, va_list lst)
 {
