@@ -12,7 +12,8 @@ OS			=	$(shell uname -s)
 
 
 # Compile variables
-BIN			=	bin
+BIN			=	../../bin/ft_printf/
+LIBFT		=	../libft/# Libft location
 FLAGS		=	-Wall -Wextra -Werror
 INCLUDE 	=	-I ./include
 ifeq ($(OS), Linux)
@@ -24,6 +25,13 @@ CC			=	gcc $(FLAGS) $(INCLUDE)
 
 
 # Code variables
+LIBFT_DEPENDENCIES	=	modify/ft_strdup.c \
+						modify/ft_strlcpy.c \
+						analyze/ft_strlen.c \
+						analyze/ft_strncmp.c \
+						analyze/ft_hasany.c
+
+
 NAME		=	libftprintf.a
 
 PRINT		=	ft_format_printf.c \
@@ -34,22 +42,18 @@ PRINT		=	ft_format_printf.c \
 				ft_putchar_fd_l.c \
 				ft_putstr_fd_l.c
 
-STR			=	ft_strdup.c \
-				ft_strlcpy.c \
-				ft_strlen.c \
-				ft_strncmp.c \
-				ft_strtoupper.c
+STR			=	ft_strtoupper.c
 
-TOOLS		=	ft_hasany.c \
-				ft_itoa_base.c \
+TOOLS		=	ft_itoa_base.c \
 				ft_nbrlen.c
 
 SRCS		=	${PRINT:%=print/%} \
 				${STR:%=str/%} \
 				${TOOLS:%=tools/%} \
-				ft_printf.c
+				ft_printf.c \
+				$(LIBFT_DEPENDENCIES:%=$(LIBFT)%)
 
-OBJS		=	${SRCS:%.c=$(BIN)/%.o}
+OBJS		=	${SRCS:%.c=$(BIN)%.o}
 
 
 # Makefile logic
@@ -61,7 +65,7 @@ $(NAME):	$(OBJS)
 	@$(LIB_CC) $(NAME) $(OBJS)
 	@echo "${LGREEN}[OK]${NC}\n"
 
-$(BIN)/%.o: src/%.c
+$(BIN)%.o: src/%.c
 	@echo "- ${TITLE}Compiling${NC} $< -> $@\c"
 	@mkdir -p $(dir $@)
 	@$(CC) -c $< -o $@
