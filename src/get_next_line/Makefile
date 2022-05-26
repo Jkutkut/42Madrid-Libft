@@ -12,6 +12,16 @@ LIB_NAME		=	../../get_next_line.a
 
 BUFFER_S		=	1024
 
+# Colors:
+NC			=	\033[0m
+RED			=	\033[0;31m
+GREEN		=	\033[0;32m
+LRED		=	\033[1;31m
+LGREEN		=	\033[1;32m
+YELLOW		=	\033[1;33m
+LBLUE		=	\033[1;34m
+TITLE		=	\033[38;5;33m
+
 # Binaries variables
 
 LIBFT_DEPENDENCIES	=	analyze/ft_strlen.c \
@@ -32,13 +42,15 @@ all: $(LIB_NAME)
 bonus: all
 
 $(LIB_NAME): $(OBJ)
-	$(info Compiling mandatory into $(LIB_NAME))
+	@echo "\n${TITLE}Compiling${NC} ${YELLOW}GNL${NC} into ${YELLOW}$(LIB_NAME)${NC}\c"
 	$(LIB_COMPILE) $(LIB_NAME) $^
+	@echo " ${GREEN}[OK]${NC}\n"
 
 $(BIN)%.o: %.c
-	@echo "- Compiling $< -> $@"
+	@echo "- ${TITLE}Compiling${NC} $< -> $@\c"
 	@mkdir -p $(dir $@)
 	$(COMPILE) -c $< -o $@ -D BUFFER_SIZE=$(BUFFER_S)
+	@echo " ${GREEN}[OK]${NC}"
 
 # Clean logic
 .PHONY: re fclean
@@ -46,9 +58,10 @@ $(BIN)%.o: %.c
 re: fclean all
 
 clean:
-	$(info Removing binary directory)
-	@rm -rf ./bin
+	@echo "- ${RED}Removing${NC} binary directory"
+	@rm -rf $(BIN)
 
 fclean: clean
-	$(info Removing $(LIB_NAME))
+	@echo "- ${RED}Removing${NC} $(LIB_NAME)"
 	@rm -f $(LIB_NAME)
+	@echo "Project ${GREEN}clean${NC}.\n"
