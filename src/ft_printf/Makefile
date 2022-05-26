@@ -12,12 +12,13 @@ OS			=	$(shell uname -s)
 
 
 # Compile variables
+NAME		=	../../libftprintf.a
 BIN			=	../../bin/ft_printf/
 LIBFT		=	../libft/# Libft location
 FLAGS		=	-Wall -Wextra -Werror
-INCLUDE 	=	-I ./include
+INCLUDE 	=	-I ../../include
 ifeq ($(OS), Linux)
-	INCLUDE	=	-I ./include -D LINUX
+	INCLUDE	=	-I ../../include -D LINUX
 endif
 
 LIB_CC		=	ar -rc
@@ -30,9 +31,6 @@ LIBFT_DEPENDENCIES	=	modify/ft_strdup.c \
 						analyze/ft_strlen.c \
 						analyze/ft_strncmp.c \
 						analyze/ft_hasany.c
-
-
-NAME		=	libftprintf.a
 
 PRINT		=	ft_format_printf.c \
 				ft_print_argv.c \
@@ -65,7 +63,7 @@ $(NAME):	$(OBJS)
 	@$(LIB_CC) $(NAME) $(OBJS)
 	@echo "${LGREEN}[OK]${NC}\n"
 
-$(BIN)%.o: src/%.c
+$(BIN)%.o: %.c
 	@echo "- ${TITLE}Compiling${NC} $< -> $@\c"
 	@mkdir -p $(dir $@)
 	@$(CC) -c $< -o $@
