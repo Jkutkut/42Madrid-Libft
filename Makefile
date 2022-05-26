@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/05/26 11:08:49 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/05/26 11:16:14 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,13 +118,13 @@ $(BIN)/%.o: $(SRC)/%.c
 re: fclean all
 
 fclean: clean
-	@echo "- ${RED}Removing${NC} binary directory"
-	@rm -rf $(BIN)
+	@echo "- ${RED}Removing${NC} $(NAME)"
+	@rm -f $(NAME)
 	@echo "Project ${GREEN}clean${NC}.\n"
 
 clean: cleanGNL
-	@echo "- ${RED}Removing${NC} $(NAME)"
-	@rm -f $(NAME)
+	@echo "- ${RED}Removing${NC} binary directory"
+	@rm -rf $(BIN)
 
 cleanGNL:
 	make -C src/get_next_line fclean
