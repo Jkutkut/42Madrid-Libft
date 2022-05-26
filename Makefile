@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/05/26 11:16:14 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/05/26 11:24:56 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,7 +99,7 @@ OBJ			=	$(SRC_CODE:$(SRC)/%.c=$(BIN)/%.o)
 
 # Triggers
 
-all: $(NAME)
+all: $(NAME) createGNL
 
 $(NAME): $(OBJ)
 	@echo "\n${TITLE}Compiling${NC} ${YELLOW}libft${NC} into ${YELLOW}$(NAME)${NC}\c"
@@ -112,6 +112,9 @@ $(BIN)/%.o: $(SRC)/%.c
 	@$(COMPILE) -c $< -o $@
 	@echo " ${GREEN}[OK]${NC}"
 
+createGNL:
+	make -C src/get_next_line all
+
 # Clean logic
 .PHONY: re fclean
 
@@ -120,11 +123,11 @@ re: fclean all
 fclean: clean
 	@echo "- ${RED}Removing${NC} $(NAME)"
 	@rm -f $(NAME)
-	@echo "Project ${GREEN}clean${NC}.\n"
+	@echo "Project ${YELLOW}Libft ${GREEN}clean${NC}.\n"
 
 clean: cleanGNL
 	@echo "- ${RED}Removing${NC} binary directory"
 	@rm -rf $(BIN)
 
 cleanGNL:
-	make -C src/get_next_line fclean
+	@make -C src/get_next_line fclean

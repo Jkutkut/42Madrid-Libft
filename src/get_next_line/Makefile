@@ -65,4 +65,4 @@ clean:
 fclean: clean
 	@echo "- ${RED}Removing${NC} $(LIB_NAME)"
 	@rm -f $(LIB_NAME)
-	@echo "Project ${GREEN}clean${NC}.\n"
+	@echo "Project ${YELLOW}GNL ${GREEN}clean${NC}."
