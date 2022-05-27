@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 23:10:35 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/05/26 11:37:11 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/05/27 07:41:36 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strtoupper(char *str);
 
 // Printf
-int	ft_printf_fd(int fd, const char *format, ...);
-int	ft_printf(const char *format, ...);
+int		ft_printf_fd(int fd, const char *format, ...);
+int		ft_printf(const char *format, ...);
 
 #endif
