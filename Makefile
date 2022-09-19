@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/05/26 16:56:22 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/09/19 18:31:25 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,7 +99,7 @@ OBJ			=	$(SRC_CODE:$(SRC)/%.c=$(BIN)/%.o)
 
 # Triggers
 
-all: $(NAME) createGNL createPrintf
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "\n${TITLE}Compiling${NC} ${YELLOW}libft${NC} into ${YELLOW}$(NAME)${NC}\c"
@@ -112,12 +112,6 @@ $(BIN)/%.o: $(SRC)/%.c
 	@$(COMPILE) -c $< -o $@
 	@echo " ${GREEN}[OK]${NC}"
 
-createGNL:
-	@make -C src/get_next_line all
-
-createPrintf:
-	@make -C src/ft_printf all
-
 # Clean logic
 .PHONY: re fclean
 
@@ -128,12 +122,6 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "Project ${YELLOW}Libft ${GREEN}clean${NC}.\n"
 
-clean: cleanGNL cleanPrintf
+clean:
 	@echo "- ${RED}Removing${NC} binary directory"
 	@rm -rf $(BIN)
-
-cleanGNL:
-	@make -C src/get_next_line fclean
-
-cleanPrintf:
-	@make -C src/ft_printf fclean
