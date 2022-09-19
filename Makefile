@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/09/19 18:31:25 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/09/19 19:35:59 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,10 +86,10 @@ PRINT		=	ft_putchar_fd.c \
 				ft_putstr_fd.c
 
 
-LIBFT_SRC	=	$(ANALYZE:%=libft/analyze/%) \
-				$(MODIFY:%=libft/modify/%) \
-				$(PRINT:%=libft/print/%) \
-				$(LIST:%=libft/list/%) # Bonus
+LIBFT_SRC	=	$(ANALYZE:%=analyze/%) \
+				$(MODIFY:%=modify/%) \
+				$(PRINT:%=print/%) \
+				$(LIST:%=list/%) # Bonus
 
 SOURCE		=	$(LIBFT_SRC) # Libft files
 
