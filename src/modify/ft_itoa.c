@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 19:57:46 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/03/20 15:58:03 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:50:27 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_itoa(int n)
 	order = ft_ndigits(n);
 	str = (char *) malloc(sizeof(char) * (order + 1));
 	if (str == NULL)
-		return (str);
+		return (NULL);
 	str[order] = '\0';
 	if (n < 0)
 		str[0] = '-';
