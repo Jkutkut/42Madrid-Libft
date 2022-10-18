@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:46:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/03/20 13:42:21 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:18:41 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 /**
  * @brief Returns a pointer to the first occurrence of needle in haystack.
  * If not found, returns NULL.
+ *
+ * Note: If str = NULL, program can crash.
  * 
  * @param str String to search in.
  * @param needle String to search.
