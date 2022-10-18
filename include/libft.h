@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/02/09 12:26:23 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/18 08:33:03 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+
+# include "get_next_line.h"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

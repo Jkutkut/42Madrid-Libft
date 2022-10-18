@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/09/19 19:35:59 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/10/18 08:34:41 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ FLAGS		=	-Wall -Wextra -Werror
 INCLUDE		=	-I./$(INCLUDE_L)
 COMPILE		=	@$(CC) $(FLAGS) $(INCLUDE)
 NAME		=	libft.a
-HEADER		=	libft.h
 
 # Colors:
 NC			=	\033[0m
@@ -34,6 +33,8 @@ LBLUE		=	\033[1;34m
 TITLE		=	\033[38;5;33m
 
 # Default libft code
+GNL			=	get_next_line.c
+
 ANALYZE		=	ft_hasany.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
@@ -85,8 +86,8 @@ PRINT		=	ft_putchar_fd.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c
 
-
-LIBFT_SRC	=	$(ANALYZE:%=analyze/%) \
+LIBFT_SRC	=	$(GNL:%=get_next_line/%) \
+				$(ANALYZE:%=analyze/%) \
 				$(MODIFY:%=modify/%) \
 				$(PRINT:%=print/%) \
 				$(LIST:%=list/%) # Bonus
