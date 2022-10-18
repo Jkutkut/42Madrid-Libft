@@ -1,6 +1,7 @@
 .info
 bin
 .vscode
+*.swp
 
 *.out
 *.a
