@@ -6,7 +6,7 @@
 /*   By: jkutkut <jre-gonz@student.42madrid.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 19:01:01 by jkutkut           #+#    #+#             */
-/*   Updated: 2022/10/18 18:19:21 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/18 20:01:27 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memset(void *s, int c, size_t n);
  */
 void	*ft_bzero(void *s, size_t n)
 {
-	return ft_memset(s, '\0', n);
+	return (ft_memset(s, '\0', n));
 }
