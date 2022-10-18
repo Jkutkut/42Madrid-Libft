@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/10/18 08:34:41 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/10/18 19:59:45 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,8 @@ MODIFY		=	ft_atoi.c \
 PRINT		=	ft_putchar_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
-				ft_putstr_fd.c
+				ft_putstr_fd.c \
+				ft_put_memory.c
 
 LIBFT_SRC	=	$(GNL:%=get_next_line/%) \
 				$(ANALYZE:%=analyze/%) \
