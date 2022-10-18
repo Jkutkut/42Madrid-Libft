@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:20:17 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/03/20 15:42:47 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:48:52 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
-
-/**
- * @brief Frees the memory of a string array.
- * 
- * @param arr String array to free.
- * @return char** Returns always NULL.
- */
-static char	**ft_freesplit(char **arr)
-{
-	size_t	i;
-
-	if (arr == NULL)
-		return (NULL);
-	i = 0;
-	while (arr[i] != NULL)
-	{
-		free(arr[i]);
-		i++;
-	}
-	free(arr);
-	return (NULL);
-}
+char	**ft_free_array(char **arr);
 
 /**
  * @brief Calculates the number of elements of a array resulting from a split.
@@ -121,7 +100,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		arr[index++] = ft_substr(s, start, i - start);
 		if (arr[index - 1] == NULL)
-			return (ft_freesplit(arr));
+			return (ft_free_array(arr));
 	}
 	return (arr);
 }
