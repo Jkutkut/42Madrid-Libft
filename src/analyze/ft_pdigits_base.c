@@ -6,14 +6,20 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 09:58:04 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 10:13:50 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/19 10:48:03 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// TODO doc
-
+/**
+ * @brief Obtain the number of characters needed to represent the given
+ * pointer in the given base.
+ *
+ * @param n pointer to represent.
+ * @param base_len length of the base.
+ * @return size_t Number of characters needed.
+ */
 size_t	ft_pdigits_base(unsigned long n, long base_len)
 {
 	size_t	order;
@@ -30,4 +36,3 @@ size_t	ft_pdigits_base(unsigned long n, long base_len)
 	}
 	return (order);
 }
-

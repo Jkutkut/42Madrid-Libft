@@ -6,15 +6,20 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 10:18:15 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 10:18:43 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/19 10:42:16 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// TODO doc
-
-char	*ft_ptoa(unsigned long nbr, char *base)
+/**
+ * @brief itoa_base for pointers.
+ *
+ * @param nbr pointer.
+ * @param base Base to use.
+ * @return char* Pointer as a string.
+ */
+char	*ft_ptoa_base(unsigned long nbr, char *base)
 {
 	long	b_len;
 	size_t	order;
