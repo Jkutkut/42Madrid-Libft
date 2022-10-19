@@ -3,10 +3,13 @@ bin
 .vscode
 *.swp
 
+printf
+
 *.out
 *.a
-_test*
 *.pdf
+
+_test*
 autoTests
 test1
 test2
@@ -14,6 +17,5 @@ test3
 libftTester
 libft-unit-test
 libft-war-machine
-
 tests/libft.h
 libft.so
