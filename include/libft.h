@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 07:50:39 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/19 08:00:49 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,8 @@ int		ft_hasany(const char *str, char c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
 size_t	ft_ndigits(int n);
+size_t	ft_ndigits_base(ssize_t n, size_t base_len);
+char	*ft_itoa_base(ssize_t nbr, char *base);
 
 // Modify
 char	**ft_free_array(char **arr);

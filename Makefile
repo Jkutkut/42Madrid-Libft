@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/10/18 19:59:45 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/10/19 08:05:34 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,8 @@ TITLE		=	\033[38;5;33m
 # Default libft code
 GNL			=	get_next_line.c
 
-ANALYZE		=	ft_hasany.c \
+ANALYZE		=	ft_atoi.c \
+				ft_hasany.c \
 				ft_isalnum.c \
 				ft_isalpha.c \
 				ft_isascii.c \
@@ -43,9 +44,12 @@ ANALYZE		=	ft_hasany.c \
 				ft_islower.c \
 				ft_isprint.c \
 				ft_isupper.c \
+				ft_itoa_base.c \
+				ft_itoa.c \
 				ft_memchr.c \
 				ft_memcmp.c \
 				ft_ndigits.c \
+				ft_ndigits_base.c \
 				ft_strchr.c \
 				ft_strlen.c \
 				ft_strncmp.c \
@@ -62,10 +66,8 @@ LIST		=	ft_lstadd_back_bonus.c \
 				ft_lstnew_bonus.c \
 				ft_lstsize_bonus.c
 
-MODIFY		=	ft_atoi.c \
-				ft_bzero.c \
+MODIFY		=	ft_bzero.c \
 				ft_calloc.c \
-				ft_itoa.c \
 				ft_memcpy.c \
 				ft_memmove.c \
 				ft_memset.c \
