@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 09:36:21 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/19 10:23:48 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ int		ft_isupper(int c);
 size_t	ft_ndigits(int n);
 size_t	ft_ndigits_base(ssize_t n, size_t base_len);
 char	*ft_itoa_base(ssize_t nbr, char *base);
+size_t	ft_pdigits_base(unsigned long n, long base_len);
+char	*ft_ptoa_base(unsigned long nbr, char *base);
 
 // Modify
 char	**ft_free_array(char **arr);
@@ -90,5 +92,6 @@ void	ft_strtoupper(char *str);
 void	*ft_put_memory(void *addr, unsigned int size);
 size_t	ft_putchar_fd_l(char s, int fd);
 size_t	ft_putstr_fd_l(char *s, int fd);
+size_t	ft_put_pointer_fd(unsigned long p, int fd);
 
 #endif
