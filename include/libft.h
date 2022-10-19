@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 08:18:40 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/19 09:36:21 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,7 @@ void	ft_strtoupper(char *str);
 
 // Print
 void	*ft_put_memory(void *addr, unsigned int size);
+size_t	ft_putchar_fd_l(char s, int fd);
+size_t	ft_putstr_fd_l(char *s, int fd);
 
 #endif
