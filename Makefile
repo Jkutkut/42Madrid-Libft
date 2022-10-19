@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/10/19 08:05:34 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/10/19 08:21:02 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,15 @@ TITLE		=	\033[38;5;33m
 
 # Default libft code
 GNL			=	get_next_line.c
+
+PRINTF		=	ft_format_printf.c \
+				ft_print_argv.c \
+				ft_printf.c \
+				ft_print_number.c \
+				ft_print_until_format.c \
+				ft_putchar_fd_l.c \
+				ft_put_pointer_fd.c \
+				ft_putstr_fd_l.c # TODO change location
 
 ANALYZE		=	ft_atoi.c \
 				ft_hasany.c \
@@ -78,6 +87,7 @@ MODIFY		=	ft_bzero.c \
 				ft_strlcat.c \
 				ft_strlcpy.c \
 				ft_strmapi.c \
+				ft_strtoupper.c \
 				ft_strtrim.c \
 				ft_substr.c \
 				ft_tolower.c \
@@ -90,6 +100,7 @@ PRINT		=	ft_putchar_fd.c \
 				ft_put_memory.c
 
 LIBFT_SRC	=	$(GNL:%=get_next_line/%) \
+				$(PRINTF:%=printf/%) \
 				$(ANALYZE:%=analyze/%) \
 				$(MODIFY:%=modify/%) \
 				$(PRINT:%=print/%) \

@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 08:00:49 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/19 08:18:40 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -83,6 +84,7 @@ char	*ft_itoa_base(ssize_t nbr, char *base);
 
 // Modify
 char	**ft_free_array(char **arr);
+void	ft_strtoupper(char *str);
 
 // Print
 void	*ft_put_memory(void *addr, unsigned int size);
