@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/10/19 10:35:01 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/10/20 09:13:17 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,7 @@ LIST		=	ft_lstadd_back_bonus.c \
 
 MODIFY		=	ft_bzero.c \
 				ft_calloc.c \
+				ft_free_array.c \
 				ft_memcpy.c \
 				ft_memmove.c \
 				ft_memset.c \

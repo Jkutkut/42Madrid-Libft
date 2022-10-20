@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:44:45 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/26 16:01:50 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/10/20 09:11:24 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	test(const char *str, char c)
 		while (arr[i] != NULL)
 			printf("\"%s\" ", arr[i++]);
 		printf("\n");
-		ft_freearr(arr);
+		ft_free_array(arr);
 	}
 	else
 		printf(" - Result: NULL\n");
