@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h> // TODO DEBUG
+#include <stdio.h>
 
 void	print_list(t_list *list)
 {

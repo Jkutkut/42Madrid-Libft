@@ -6,12 +6,12 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:10:23 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/01/20 08:54:53 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/12/27 09:39:42 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> // TODO DEBUG
-#include <string.h> // TODO DEBUG
+#include <stdio.h>
+#include <string.h>
 
 #include "libft.h"
 
@@ -33,6 +33,4 @@ int		main(void)
 	test("hola que tal", cpy_og, cpy_cs, 4);
 
 	test(cpy_cs, cpy_og + 1, cpy_cs, 6);
-
-	// TODO TEST
 }

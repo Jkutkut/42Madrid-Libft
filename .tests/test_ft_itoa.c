@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h> // TODO DEBUG
-#include <stdlib.h> // TODO DEBUG
+#include <stdio.h>
+#include <stdlib.h>
 
 #include "libft.h"
 

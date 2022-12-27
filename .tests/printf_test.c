@@ -1,4 +1,4 @@
-#include <stdio.h> // TODO DEBUG
+#include <stdio.h>
 
 int	main()
 {
