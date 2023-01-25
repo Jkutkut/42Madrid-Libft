@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:38:02 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 11:01:43 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/01/25 18:21:21 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ char	*ft_itoa_base(ssize_t nbr, char *base)
 		str[order] = '0';
 	while (nbr != 0)
 	{
-		str[order--] = base[((ssize_t) nbr % b_len) * sign];
-		nbr /= b_len;
+		str[order--] = base[(nbr % (ssize_t) b_len) * sign];
+		nbr /= (ssize_t) b_len;
 	}
 	return (str);
 }

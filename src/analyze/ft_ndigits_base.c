@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 22:41:50 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 07:58:23 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/01/25 17:59:30 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_ndigits_base(ssize_t n, size_t base_len)
 	while (n != 0)
 	{
 		order++;
-		n /= base_len;
+		n /= (ssize_t) base_len;
 	}
 	return (order);
 }
