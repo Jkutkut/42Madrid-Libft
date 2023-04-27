@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2023/04/27 21:06:15 by jre-gonz         ###   ########.fr        #
+#    Updated: 2023/04/27 21:57:47 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ ANALYZE		=	ft_atoi.c \
 				ft_isascii.c \
 				ft_isdigit.c \
 				ft_islower.c \
+				ft_isnbr.c \
 				ft_isprint.c \
 				ft_isupper.c \
 				ft_itoa_base.c \

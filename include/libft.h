@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2023/04/27 21:05:39 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 21:57:32 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_islower(int c);
+int		ft_isnbr(char *str);
 int		ft_isprint(int c);
 int		ft_isupper(int c);
 char	*ft_itoa_base(ssize_t nbr, char *base);
