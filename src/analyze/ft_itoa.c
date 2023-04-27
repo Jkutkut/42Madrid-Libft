@@ -6,13 +6,14 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 19:57:46 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/18 17:50:27 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:52:26 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 size_t	ft_ndigits(int n);
+void	*ft_calloc(size_t count, size_t size);
 
 /**
  * @brief Returns a string representation of an integer.
@@ -27,10 +28,9 @@ char	*ft_itoa(int n)
 	char	*str;
 
 	order = ft_ndigits(n);
-	str = (char *) malloc(sizeof(char) * (order + 1));
+	str = (char *) ft_calloc(order + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	str[order] = '\0';
 	if (n < 0)
 		str[0] = '-';
 	if (n == 0)
