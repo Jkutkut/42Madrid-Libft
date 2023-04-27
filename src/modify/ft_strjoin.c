@@ -6,12 +6,13 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 12:34:54 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/03/20 15:35:00 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:54:43 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+void	*ft_calloc(size_t count, size_t size);
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -39,7 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s2 == NULL)
 		return (ft_strdup(s1));
 	s2_len = ft_strlen(s2);
-	str = (char *) malloc(sizeof(char) * (s1_len + s2_len + 1));
+	str = (char *) ft_calloc(s1_len + s2_len + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, s1, s1_len + 1);

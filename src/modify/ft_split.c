@@ -6,12 +6,13 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/23 12:20:17 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/18 18:48:52 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:54:04 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+void	*ft_calloc(size_t count, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strdup(const char *s);
 char	**ft_free_array(char **arr);
@@ -60,10 +61,9 @@ static char	**init_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	len = ft_countelements(s, c);
-	arr = malloc(sizeof(char *) * (len + 1));
+	arr = ft_calloc(len + 1, sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
-	arr[len] = NULL;
 	return (arr);
 }
 
