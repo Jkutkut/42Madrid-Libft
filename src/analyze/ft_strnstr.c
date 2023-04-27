@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 16:46:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/18 12:18:41 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:33:09 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * @brief Returns a pointer to the first occurrence of needle in haystack.
  * If not found, returns NULL.
  *
- * Note: If str = NULL, program can crash.
+ * @note If str or needle are null, the program must crash.
  * 
  * @param str String to search in.
  * @param needle String to search.
@@ -36,12 +36,8 @@ char	*ft_strnstr(const char *str, const char *needle, size_t len)
 		if (str[i] == *needle)
 		{
 			j = 0;
-			while (needle[j] && str[i + j] && i + j < len)
-			{
-				if (str[i + j] != needle[j])
-					break ;
+			while (i + j < len && needle[j] && str[i + j] == needle[j])
 				j++;
-			}
 			if (!needle[j])
 				return ((char *) &str[i]);
 		}

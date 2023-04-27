@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 14:56:33 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/18 12:22:07 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:33:42 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s);
 /**
  * @brief Returns a pointer to the last occurrence of the character c in s.
  * 
- * Note: NULL will crash.
+ * @note NULL will crash.
  *
  * @param s String to search.
  * @param c Character to search.

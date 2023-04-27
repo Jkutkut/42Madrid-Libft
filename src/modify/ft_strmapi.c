@@ -6,12 +6,13 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 14:45:25 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/03/20 13:45:37 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 22:54:57 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
+void	*ft_calloc(size_t count, size_t size);
 size_t	ft_strlen(const char *s);
 
 /**
@@ -28,7 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	if (s == NULL)
 		return (NULL);
-	str = malloc(ft_strlen(s) + 1);
+	str = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	i = 0;

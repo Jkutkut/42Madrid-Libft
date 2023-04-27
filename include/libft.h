@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/19 11:44:48 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 23:04:58 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_islower(int c);
+int		ft_isnbr(char *str);
 int		ft_isprint(int c);
 int		ft_isupper(int c);
 char	*ft_itoa_base(ssize_t nbr, char *base);
@@ -44,6 +45,7 @@ size_t	ft_ndigits(int n);
 size_t	ft_pdigits_base(unsigned long n, long base_len);
 char	*ft_ptoa_base(unsigned long nbr, char *base);
 char	*ft_strchr(const char *s, int c);
+int		ft_strcmp(char *s1, char *s2);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
@@ -81,13 +83,13 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 // ************ Print ************
-void	ft_putchar_fd(char c, int fd);
-size_t	ft_putchar_fd_l(char s, int fd);
-void	ft_putendl_fd(char *s, int fd);
 void	*ft_put_memory(void *addr, unsigned int size);
-void	ft_putnbr_fd(int n, int fd);
 size_t	ft_put_pointer_fd(unsigned long p, int fd);
-void	ft_putstr_fd(char *s, int fd);
+size_t	ft_putchar_fd_l(char s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 size_t	ft_putstr_fd_l(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
