@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:13:41 by jre-gonz          #+#    #+#             */
-/*   Updated: 2023/04/27 21:57:32 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 23:04:58 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,13 +83,13 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 // ************ Print ************
-void	ft_putchar_fd(char c, int fd);
-size_t	ft_putchar_fd_l(char s, int fd);
-void	ft_putendl_fd(char *s, int fd);
 void	*ft_put_memory(void *addr, unsigned int size);
-void	ft_putnbr_fd(int n, int fd);
 size_t	ft_put_pointer_fd(unsigned long p, int fd);
-void	ft_putstr_fd(char *s, int fd);
+size_t	ft_putchar_fd_l(char s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 size_t	ft_putstr_fd_l(char *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif

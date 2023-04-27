@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_memory.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jre-gonz <jre-gonz@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 19:58:14 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/10/18 20:01:47 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2023/04/27 23:09:16 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #define LINE_SIZE 16
 #define HEX_BASE "0123456789abcdef"
 
-void	print_memory_text(char *str, int size)
+static void	print_memory_text(char *str, int size)
 {
 	int		i;
 
@@ -26,7 +26,7 @@ void	print_memory_text(char *str, int size)
 	write(1, str, size);
 }
 
-void	char2hex(char c)
+static void	char2hex(char c)
 {
 	char			digits[2];
 
@@ -45,7 +45,7 @@ void	char2hex(char c)
 	write(1, digits, 2);
 }
 
-void	print_direction(unsigned long addr)
+static void	print_direction(unsigned long addr)
 {
 	char	addr_arr[16];
 	int		i;
@@ -65,7 +65,7 @@ void	print_direction(unsigned long addr)
 	write(1, addr_arr, 16);
 }
 
-void	print_memory_line(void *addr, unsigned int size)
+static void	print_memory_line(void *addr, unsigned int size)
 {
 	unsigned int	i;
 
@@ -90,6 +90,13 @@ void	print_memory_line(void *addr, unsigned int size)
 	write(1, "\n", 1);
 }
 
+/**
+ * @brief The equivalent of the `hexdump -C` command.
+ * 
+ * @param addr The address of the memory to print.
+ * @param size Amount of bytes to print.
+ * @return void* The address of the memory given.
+ */
 void	*ft_put_memory(void *addr, unsigned int size)
 {
 	unsigned int	i;
