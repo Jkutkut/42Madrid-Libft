@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 09:47:39 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/10/20 09:13:17 by jre-gonz         ###   ########.fr        #
+#    Updated: 2023/04/27 21:06:15 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,7 @@ ANALYZE		=	ft_atoi.c \
 				ft_pdigits_base.c \
 				ft_ptoa_base.c \
 				ft_strchr.c \
+				ft_strcmp.c \
 				ft_strlen.c \
 				ft_strncmp.c \
 				ft_strnstr.c \
